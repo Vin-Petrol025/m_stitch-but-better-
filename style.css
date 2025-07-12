@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bgclrdark);
+  height: 100vh;
+  scroll-snap-type: y, mandatory;
+}
+.nav {
+  height: 65px;
+  box-sizing: content-box;
+  display: flex;
+  background-color: var(--bgclrdark);
+  padding: var(--paddingbasic);
+  /* padding-top: 15px; */
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 20px var(--primary);
+}
+.logo {
+  font-size: 3.3rem;
+  text-align: center;
+  /* line-height: normal; */
+  margin-left: 5px;
+  margin-top: 10px;
+  color: var(--textclrprimary);
+  font-family: "Milven_Logo";
+}
+.nav .nav_item {
+  display: flex;
+  width: 45%;
+  justify-content: space-evenly;
+  /* padding: 0 10px 0 0; */
+}
+.nav .nav_item .nav_links a {
+  text-decoration: none;
+  font-family: "coolvetica";
+  color: var(--textclrprimary);
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.nav .nav_item .nav_links a:hover {
+  color: var(--secondary1);
+}
