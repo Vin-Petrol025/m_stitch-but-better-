@@ -18,17 +18,21 @@ body {
   background-color: var(--bgclrdark);
   height: 100vh;
   scroll-snap-type: y, mandatory;
+  overflow-x: hidden;
 }
 .nav {
-  height: 75px;
+  height: var(--navbar-height);
+  width: 100vw;
   box-sizing: border-box;
   display: flex;
+  /* position: fixed; */
   background-color: var(--bgclrdark);
   padding: var(--paddingbasic);
   /* padding-top: 15px; */
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 5px 20px var(--primary);
+  box-shadow: 0 5px 30px -20px var(--primary);
+  z-index: 100;
 }
 .logo {
   font-size: 3.3rem;
@@ -37,7 +41,7 @@ body {
   margin-left: 5px;
   margin-top: 10px;
   color: var(--textclrprimary);
-  font-family: "Milven_Logo";
+  font-family: "milven";
 }
 .nav .nav_item {
   display: flex;
@@ -57,9 +61,144 @@ body {
   color: var(--secondary1);
 }
 #hero {
-  height: 100vh;
+  height: calc(100vh - var(--navbar-height));
   /* width: 100vw; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #hero_text {
-  background-color: wheat;
+  background-color: var(--bgclrcontentdark);
+
+  border-radius: var(--border-radius);
+  height: 90%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: var(--marginbasic);
+  /* margin-left: 120px; */
+}
+#hero #hero_text span {
+  height: 90%;
+  width: 45%;
+  margin-left: 50px;
+}
+.hero_big {
+  margin-left: 50px;
+  margin-top: 30px;
+  /* width: 365px; */
+  font-size: 130px;
+  /* font-weight: 60; */
+  color: var(--textclrprimary);
+  font-family: "milven";
+}
+.hero_small {
+  color: var(--textclrprimary);
+  font-size: 45px;
+  font-family: "moela";
+  font-weight: lighter;
+  margin-left: 50px;
+  width: 75%;
+  margin-top: 10px;
+}
+
+.hero_vid {
+  filter: blur(0px);
+  border-radius: var(--border-radius);
+  margin: var(--marginbasic);
+  height: 80%;
+  box-shadow: 0 24px 59px -30px var(--primary);
+  margin-right: 50px;
+}
+
+.hero_btn {
+  text-decoration: none;
+  display: flex;
+  margin-left: 50px;
+  font-size: 35px;
+  color: var(--secondary1);
+  border: 3px solid var(--primary);
+  border-radius: var(--border-radius);
+  height: 70px;
+  margin-top: 115px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 47%;
+  font-family: "moela";
+  transition: 0.3s;
+}
+.hero_btn:hover {
+  border: 3px solid var(--secondary1);
+  background-color: var(--primary-dark);
+  /* color: var(--primary); */
+  box-shadow: 0 5px 20px -05px var(--primary);
+}
+.motive h1 {
+  color: var(--textclrprimary);
+  font-family: "moela";
+  width: 100vw;
+  text-align: center;
+  font-weight: 500;
+  font-size: 75px;
+  margin-top: 50px;
+  cursor: default;
+}
+.motive .motive_cont h1 {
+  font-family: "coolvetica";
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 150px;
+  margin-top: 0;
+  width: 85%;
+  padding: 0 50px;
+}
+.motive_cont {
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
+  align-items: center;
+}
+.motive_text {
+  background-color: var(--bgclrcontentdark);
+  color: var(--textclrprimary);
+  margin: var(--marginbasic);
+  padding: var(--paddingbasic);
+  border-radius: var(--border-radius);
+  width: 75%;
+}
+.motive_text h2 {
+  font-size: 50px;
+  font-family: "moela";
+  font-weight: 500;
+  text-align: center;
+}
+.motive_text p {
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: justify;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.imp {
+  color: var(--secondary1);
+  font-size: 30px;
+  font-weight: 600;
+}
+.motive .motive_cont h1 span {
+  color: var(--primary);
+  /* text-decoration: underline; */
+}
+.motive_text a {
+  margin-left: 0;
+  margin-top: 50px;
+  width: 40%;
+  height: 55px;
+  font-size: 30px;
+  margin-left: auto;
+  /* background-color: var(--secondary1); */
+  /* color */
 }

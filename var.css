@@ -1,9 +1,11 @@
 :root {
-  --bgclrdark: hsl(0, 0%, 5%);
+  --bgclrdark: hsl(0, 0%, 7%);
+  --bgclrcontentdark: hsl(0, 0%, 15%);
   --navbar: hsl(0, 0%, 15%);
   --textclrprimary: hsl(0, 0%, 90%);
   --textclrsecondary: hsl(0, 0%, 70%);
-  --primary: hsl(158, 80%, 30%);
+  --primary: hsl(160, 50%, 50%);
+  --primary-dark: hsl(160, 50%, 20%);
   --secondary1: hsl(38, 80%, 55%);
   --secondary2: hsl(290, 50%, 50%);
   --secondary3: hsl(210, 40%, 50%);
@@ -12,11 +14,13 @@
   --warning: hsl(30, 100%, 50%);
   --danger: hsl(0, 80%, 55%);
   --muted: hsl(0, 0%, 50%);
-  --paddingbasic: 10px;
+  --paddingbasic: 20px;
   --marginbasic: 10px;
+  --navbar-height: 75px;
+  --border-radius: 45px;
 }
 @font-face {
-  font-family: "Milven_Logo";
+  font-family: "milven";
   src: url("fonts/Milven-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -24,6 +28,12 @@
 @font-face {
   font-family: "coolvetica";
   src: url("fonts/Coolvetica\ Rg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "coolvetica-light";
+  src: url("fonts/Coolvetica\ Rg\ Cond.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -36,6 +46,55 @@
 @font-face {
   font-family: "heavitas";
   src: url("fonts/Heavitas.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "caviar";
+  src: url("fonts/CaviarDreams.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lamcho";
+  src: url("fonts/LAMCHO.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lorenna";
+  src: url("fonts/Lorenna.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "meravila";
+  src: url("fonts/Meravila-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "moela";
+  src: url("fonts/MOELA.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nagista";
+  src: url("fonts/Nagista\ DEMO\ VERSION.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "somer";
+  src: url("fonts/SOMER.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("fonts/Roboto-Regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
