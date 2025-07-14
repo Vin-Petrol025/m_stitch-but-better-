@@ -137,7 +137,17 @@ body {
   /* color: var(--primary); */
   box-shadow: 0 5px 20px -05px var(--primary);
 }
-.motive h1 {
+.sec_start_text {
+  color: var(--textclrprimary);
+  font-family: "moela";
+  width: 100vw;
+  text-align: center;
+  font-weight: 500;
+  font-size: 75px;
+  margin-top: 50px;
+  cursor: default;
+}
+.motive_pic {
   color: var(--textclrprimary);
   font-family: "moela";
   width: 100vw;
@@ -176,8 +186,9 @@ body {
   font-weight: 500;
   text-align: center;
 }
-.motive_text p {
+.motive_norm_text {
   font-size: 20px;
+  color: var(--textclrprimary);
   margin-top: 50px;
   text-align: justify;
   font-family: sans-serif;
@@ -188,7 +199,7 @@ body {
   font-size: 30px;
   font-weight: 600;
 }
-.motive .motive_cont h1 span {
+.green {
   color: var(--primary);
   /* text-decoration: underline; */
 }
@@ -201,4 +212,84 @@ body {
   margin-left: auto;
   /* background-color: var(--secondary1); */
   /* color */
+}
+.shop_page .motive_norm_text {
+  text-align: center;
+  padding: 50px 50px 25px 50px;
+  font-size: 30px;
+  background-color: var(--bgclrcontentdark);
+  color: var(--textclrprimary);
+  margin: var(--marginbasic);
+  margin-top: 50px;
+  border-radius: var(--border-radius);
+}
+.shop_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.motive_norm_text a {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 45px;
+}
+
+footer {
+  display: flex;
+  height: 200px;
+  /* background-color: var(--bgclrcontentdark); */
+  border-top: 4px solid var(--footer-border);
+  margin-top: 100px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_logo {
+  /* height: 100%; */
+  /* width: 365px; */
+  margin-left: 30px;
+  width: 25%;
+  text-align: left;
+  margin-top: 25px;
+  font-size: 90px;
+  /* font-weight: 60; */
+  color: var(--textclrprimary);
+  font-family: "milven";
+  /* text-align: center; */
+}
+.footer_logo p {
+  font-size: 15px;
+  /* max-width: 100%; */
+  text-align: left;
+  color: var(--textclrsecondary);
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: var(--marginbasic);
+}
+
+.footer_link {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.footer_link p {
+  font-family: "moela";
+  font-size: 45px;
+  width: 100%;
+  margin-top: 25px;
+  /* margin-left: auto; */
+  margin-bottom: auto;
+  color: var(--textclrprimary);
+}
+.footer_links {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.footer_links img {
+  width: 50px;
 }
