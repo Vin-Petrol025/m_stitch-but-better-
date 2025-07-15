@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="var.css" />
+    <title>Product Details | M Stitch</title>
+  </head>
+  <body>
+    <section class="nav">
+      <div class="logo">M Stitch</div>
+      <div class="nav_item">
+        <div class="nav_links"><a href="index.html">Home</a></div>
+        <div class="nav_links"><a href="shop.html" class="active">Shop</a></div>
+        <div class="nav_links"><a href="about_us.html">About Us</a></div>
+        <div class="nav_links"><a href="contact_us.html">Contact Us</a></div>
+      </div>
+    </section>
+    <main>
+      <div id="product-detail" class="product-detail"></div>
+    </main>
+    <footer>
+      <div class="footer_logo">
+        M Stitch
+        <p>
+          M Stitch clothing brand brings high quality, premium material,
+          tailored suits. We emphasize on quality. Shop now at our website or
+          wisit out Instagram, Facebook, Youtube, Whatsapp chanels.
+        </p>
+      </div>
+      <div class="footer_link">
+        <p>Learn more about us on</p>
+        <a href="" class="footer_links"
+          ><img src="content/ig.png" alt="Instagram"
+        /></a>
+        <a href="" class="footer_links"
+          ><img src="content/fb.png" alt="facebook"
+        /></a>
+        <a href="" class="footer_links"
+          ><img src="content/wap.png" alt="Whatsapp"
+        /></a>
+        <a href="" class="footer_links"
+          ><img src="content/yt.png" alt="Youtube"
+        /></a>
+      </div>
+    </footer>
+    <script src="products.js"></script>
+    <script>
+      // Get product ID from URL
+      const params = new URLSearchParams(window.location.search);
+      const productId = parseInt(params.get("id"));
+      const product = products.find((p) => p.id === productId);
+      const detailDiv = document.getElementById("product-detail");
+      if (product) {
+        // Build the image collage HTML
+        let thumbnails = product.images
+          .map(
+            (img, idx) => `
+          <img src="${img}" class="thumbnail${
+              idx === 0 ? " selected" : ""
+            }" data-idx="${idx}" alt="${product.name} thumbnail ${idx + 1}" />
+        `
+          )
+          .join("");
+        detailDiv.innerHTML = `
+          <div class="product-gallery">
+            <div class="thumbnails">
+              ${thumbnails}
+            </div>
+            <div class="main-image-container">
+              <img src="${product.images[0]}" class="main-image fade-in" alt="${product.name}" />
+            </div>
+            <div class="product-info">
+              <h2>${product.name}</h2>
+              <p class="price">${product.price}</p>
+              <p class="product-description">${product.description}</p>
+              
+              
+              <a href="shop.html" class="back-link">&larr; Back to Shop</a>
+            </div>
+            <div class="size-chart-section">
+                <h3>Size Chart</h3>
+                <img src="${product.sizeChart}" alt="${product.name} Size Chart" class="size-chart-img" />
+              </div>
+          </div>
+        `;
+        // Add JS for thumbnail click
+        const mainImg = detailDiv.querySelector(".main-image");
+        const thumbs = detailDiv.querySelectorAll(".thumbnail");
+        thumbs.forEach((thumb, idx) => {
+          thumb.addEventListener("click", function () {
+            if (!thumb.classList.contains("selected")) {
+              detailDiv
+                .querySelector(".thumbnail.selected")
+                .classList.remove("selected");
+              thumb.classList.add("selected");
+              mainImg.classList.remove("fade-in");
+              void mainImg.offsetWidth; // trigger reflow for animation
+              mainImg.src = product.images[idx];
+              mainImg.classList.add("fade-in");
+            }
+          });
+        });
+      } else {
+        detailDiv.innerHTML = "<p>Product not found.</p>";
+      }
+    </script>
+  </body>
+</html>

@@ -19,6 +19,7 @@
   --marginbasic: 10px;
   --navbar-height: 75px;
   --border-radius: 45px;
+  --border-radius-small: 25px;
 }
 @font-face {
   font-family: "milven";
