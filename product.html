@@ -9,10 +9,12 @@
   </head>
   <body>
     <section class="nav">
-      <div class="logo">M Stitch</div>
+      <div class="logo">BT</div>
       <div class="nav_item">
-        <div class="nav_links"><a href="index.html">Home</a></div>
-        <div class="nav_links"><a href="shop.html" class="active">Shop</a></div>
+        <div class="nav_links">
+          <a href="index.html" class="active">Home</a>
+        </div>
+        <div class="nav_links"><a href="shop.html">Shop</a></div>
         <div class="nav_links"><a href="about_us.html">About Us</a></div>
         <div class="nav_links"><a href="contact_us.html">Contact Us</a></div>
       </div>
@@ -22,11 +24,11 @@
     </main>
     <footer>
       <div class="footer_logo">
-        M Stitch
+        B T
         <p>
-          M Stitch clothing brand brings high quality, premium material,
-          tailored suits. We emphasize on quality. Shop now at our website or
-          wisit out Instagram, Facebook, Youtube, Whatsapp chanels.
+          Belle Tasche accessories presents, high quality, imported, long
+          lasting bags and much more Shop now at our website or wisit out
+          Instagram and Facebook chanels.
         </p>
       </div>
       <div class="footer_link">
@@ -36,12 +38,6 @@
         /></a>
         <a href="" class="footer_links"
           ><img src="content/fb.png" alt="facebook"
-        /></a>
-        <a href="" class="footer_links"
-          ><img src="content/wap.png" alt="Whatsapp"
-        /></a>
-        <a href="" class="footer_links"
-          ><img src="content/yt.png" alt="Youtube"
         /></a>
       </div>
     </footer>
@@ -65,24 +61,19 @@
           .join("");
         detailDiv.innerHTML = `
           <div class="product-gallery">
-            <div class="thumbnails">
-              ${thumbnails}
-            </div>
+
             <div class="main-image-container">
               <img src="${product.images[0]}" class="main-image fade-in" alt="${product.name}" />
+            </div>
+                        <div class="thumbnails">
+              ${thumbnails}
             </div>
             <div class="product-info">
               <h2>${product.name}</h2>
               <p class="price">${product.price}</p>
               <p class="product-description">${product.description}</p>
-              
-              
               <a href="shop.html" class="back-link">&larr; Back to Shop</a>
             </div>
-            <div class="size-chart-section">
-                <h3>Size Chart</h3>
-                <img src="${product.sizeChart}" alt="${product.name} Size Chart" class="size-chart-img" />
-              </div>
           </div>
         `;
         // Add JS for thumbnail click

@@ -5,8 +5,10 @@
   --textclrprimary: hsl(0, 0%, 90%);
   --textclrsecondary: hsl(0, 0%, 70%);
   --footer-border: hsl(0, 0%, 50%);
+  --sold-out: hsl(0, 100%, 71%);
   --primary: hsl(160, 50%, 50%);
   --primary-dark: hsl(160, 50%, 20%);
+  --primary-dark-trnslcnt: hsla(160, 50%, 20%, 0.75);
   --secondary1: hsl(38, 80%, 55%);
   --secondary2: hsl(290, 50%, 50%);
   --secondary3: hsl(210, 40%, 50%);
@@ -19,6 +21,7 @@
   --marginbasic: 10px;
   --navbar-height: 75px;
   --border-radius: 45px;
+  --border-radius-small: 15px;
   --border-radius-small: 25px;
 }
 @font-face {
