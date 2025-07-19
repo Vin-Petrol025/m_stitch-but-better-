@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="var.css" />
-    <title>Product Details | M Stitch</title>
+    <title>Product Details | BT</title>
   </head>
   <body>
     <section class="nav">
       <div class="logo">BT</div>
       <div class="nav_item">
         <div class="nav_links">
-          <a href="index.html" class="active">Home</a>
+          <a href="index.html">Home</a>
         </div>
-        <div class="nav_links"><a href="shop.html">Shop</a></div>
+        <div class="nav_links"><a href="shop.html" class="active">Shop</a></div>
         <div class="nav_links"><a href="about_us.html">About Us</a></div>
         <div class="nav_links"><a href="contact_us.html">Contact Us</a></div>
       </div>
@@ -24,7 +24,7 @@
     </main>
     <footer>
       <div class="footer_logo">
-        B T
+        BT
         <p>
           Belle Tasche accessories presents, high quality, imported, long
           lasting bags and much more Shop now at our website or wisit out
@@ -43,13 +43,11 @@
     </footer>
     <script src="products.js"></script>
     <script>
-      // Get product ID from URL
       const params = new URLSearchParams(window.location.search);
       const productId = parseInt(params.get("id"));
       const product = products.find((p) => p.id === productId);
       const detailDiv = document.getElementById("product-detail");
       if (product) {
-        // Build the image collage HTML
         let thumbnails = product.images
           .map(
             (img, idx) => `
@@ -76,7 +74,6 @@
             </div>
           </div>
         `;
-        // Add JS for thumbnail click
         const mainImg = detailDiv.querySelector(".main-image");
         const thumbs = detailDiv.querySelectorAll(".thumbnail");
         thumbs.forEach((thumb, idx) => {
@@ -87,7 +84,7 @@
                 .classList.remove("selected");
               thumb.classList.add("selected");
               mainImg.classList.remove("fade-in");
-              void mainImg.offsetWidth; // trigger reflow for animation
+              void mainImg.offsetWidth;
               mainImg.src = product.images[idx];
               mainImg.classList.add("fade-in");
             }

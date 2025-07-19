@@ -23,8 +23,19 @@ products.forEach((product) => {
         <p class="product-description">${product.shortDescription}</p>
         <p>${product.price}</p>
       </a>
+      <button class="add-to-cart-btn" data-id="${product.id}">Add to Cart</button>
     `;
   }
 
   productList.appendChild(card);
+});
+
+document.addEventListener("click", function(e) {
+  if (e.target.classList.contains("add-to-cart-btn")) {
+    const id = parseInt(e.target.getAttribute("data-id"));
+    let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    cart.push(id);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Added to cart!");
+  }
 });

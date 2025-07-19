@@ -407,6 +407,7 @@ main {
 
   color: var(--textclrprimary);
   width: 25%;
+  /* min-width: 50%; */
   text-align: center;
   padding: 20px 10px;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -507,11 +508,12 @@ main {
   /* max-width: 400px;
   max-height: 400px; */
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   box-shadow: 0 2px 16px -8px var(--primary);
   opacity: 1;
   transition: opacity 0.4s;
 }
+
 .main-image.fade-in {
   opacity: 0;
   animation: fadeInImg 0.4s forwards;
@@ -555,6 +557,8 @@ main {
   font-size: 1.5rem;
   margin-top: 16px;
   transition: color 0.2s;
+  font-family: "coolvetica";
+  font-weight: 500;
 }
 .product-info .back-link:hover {
   color: var(--secondary1);
@@ -616,6 +620,25 @@ main {
   font-weight: 500;
   font-size: 2rem;
   border-radius: var(--border-radius-small);
+}
+.add-to-cart-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 28px;
+  background: var(--secondary1);
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "coolvetica", sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px -4px var(--secondary1);
+}
+.add-to-cart-btn:hover {
+  background: var(--primary);
+  transform: scale(1.07);
 }
 
 /* shop page css end */

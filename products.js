@@ -309,28 +309,17 @@ const products = [
   },
   {
     id: 24,
-    name: "Brown Leather Satchel",
+    name: "MK Pink Clutch",
     price: "PKR 3500/-",
-    image: "content/bags/DSC00222.JPG",
+    image: "content/bags/DSC00225.JPG",
     images: [
-      "content/bags/DSC00222.JPG",
-      "content/bags/DSC00223.JPG"
+      "content/bags/DSC00225.JPG",
+      "content/bags/DSC00226.JPG",
+      "content/bags/DSC00227.JPG",
     ],
-    shortDescription: "Brown leather satchel, premium quality.",
-    description: "Premium brown leather satchel, classic design with sturdy build. Suitable for work and travel.",
+    shortDescription: "Pink MK Clutch with classic design.",
+    description: "Pink MK Clutch, perfect for evening outings. This clutch features a classic design with a soft pink color, spacious interior, and a stylish finish that adds a touch of elegance to your outfit.",
     inStock: 1
   },
-  {
-    id: 25,
-    name: "Pink Crossbody Bag",
-    price: "PKR 2100/-",
-    image: "content/bags/DSC00224.JPG",
-    images: [
-      "content/bags/DSC00224.JPG",
-      "content/bags/DSC00225.JPG"
-    ],
-    shortDescription: "Pink crossbody bag, cute and functional.",
-    description: "Cute pink crossbody bag, functional and stylish. Adjustable strap and secure zip closure.",
-    inStock: 0
-  }
+  
 ];
