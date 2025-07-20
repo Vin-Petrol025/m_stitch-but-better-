@@ -5,7 +5,7 @@ products.forEach(product => {
   card.innerHTML = product.inStock === 0
     ? `
       <div class="img-wrapper out-of-stock">
-        <img src="${product.image}" alt="${product.name}" width="300" height="300" loading="lazy" />
+        <img src="${product.image}" alt="${product.name}" loading="lazy" width="300" height="300" loading="lazy" />
         <span class="sold-out-overlay">SOLD OUT</span>
       </div>
       <h3>${product.name}</h3>

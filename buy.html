@@ -32,7 +32,7 @@
       if (product) {
         buyDiv.innerHTML = `
           <h2>Buy: ${product.name}</h2>
-          <img src="${product.image}" alt="${product.name}">
+          <img src="${product.image}" loading="lazy" alt="${product.name}">
           <p>${product.price}</p>
           <form action="https://script.google.com/macros/s/AKfycbwtYbCqSyi9KePJqUHAeHQ_gGl6Dem1Pxw16o5KjhncTuRtUk9DSYNL50ev5Stp0G8V/exec" method="POST" id="order-form">
             <input type="hidden" name="product_id" value="${product.id}">
