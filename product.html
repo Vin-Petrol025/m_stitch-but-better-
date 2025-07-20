@@ -61,7 +61,9 @@
           <div class="product-gallery">
 
             <div class="main-image-container">
-              <img src="${product.images[0]}" class="main-image fade-in" alt="${product.name}" />
+              <img src="${product.images[0]}" class="main-image fade-in" alt="${
+          product.name
+        }" />
             </div>
                         <div class="thumbnails">
               ${thumbnails}
@@ -70,7 +72,12 @@
               <h2>${product.name}</h2>
               <p class="price">${product.price}</p>
               <p class="product-description">${product.description}</p>
-              <a href="shop.html" class="back-link">&larr; Back to Shop</a>
+              ${
+                product.inStock === 1
+                  ? `<a href="buy.html?id=${product.id}" class="buy-now-btn">Buy Now</a>`
+                  : ""
+              }
+                <a href="shop.html" class="back-link">&larr; Back to Shop</a>
             </div>
           </div>
         `;
