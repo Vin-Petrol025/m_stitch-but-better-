@@ -43,20 +43,6 @@
     </footer>
     <script src="products.js"></script>
     <script>
-
- window.addEventListener("DOMContentLoaded", () => {
-    const loader = document.getElementById("loader");
-
-    setTimeout(() => {
-      loader.style.opacity = "0";
-      loader.style.transition = "opacity 0.5s ease";
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 500);
-    }, 5000); // 5000 ms = 5 seconds
-  });
-
-
       const params = new URLSearchParams(window.location.search);
       const productId = parseInt(params.get("id"));
       const product = products.find((p) => p.id === productId);
@@ -75,9 +61,7 @@
           <div class="product-gallery">
 
             <div class="main-image-container">
-              <img src="${
-                product.images[0]
-              }" class="main-image fade-in" alt="${
+              <img src="${product.images[0]}" class="main-image fade-in" alt="${
           product.name
         }" />
             </div>
