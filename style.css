@@ -754,7 +754,7 @@ main {
   font-family: "coolvetica";
   font-size: 55px;
 }
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .nav{
     flex-direction: column;
     padding:5px;
