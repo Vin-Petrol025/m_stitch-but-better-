@@ -7,7 +7,7 @@
      setTimeout(() => {
        loader.style.display = "none";
      }, 500);
-   }, 5000); // 5000 ms = 5 seconds
+   }, 3000); // 5000 ms = 5 seconds
  });
 
 
