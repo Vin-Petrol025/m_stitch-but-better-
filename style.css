@@ -14,6 +14,15 @@ body {
 .logo {
   text-align: center;
 }
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
 .hero_big,
 .loading-text,
 .logo,
@@ -120,12 +129,13 @@ body {
 .hero_big {
   font-size: 150px;
   cursor: default;
-  transition: 0.3s;
+  transition: 0.15s;
+  position: relative;
 }
-.hero_big:hover {
-  color: var(--primary);
-  /* text-shadow: 0 0 10px var(--primary); */
-}
+/* .hero_big:hover {
+  /* color: var(--primary); */
+/* text-shadow: 0 0 10px var(--primary); */
+/* } */
 .hero_btn,
 .motive_pic,
 .motive_text h2,
@@ -145,7 +155,7 @@ body {
   margin-top: 115px;
   justify-content: center;
   width: 50%;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .product-card,
 .product-gallery {
@@ -154,7 +164,7 @@ body {
 .hero_btn:hover {
   border: 3px solid var(--secondary1);
   background-color: var(--primary-dark);
-  box-shadow: 0 5px 20px 5px var(--primary);
+  box-shadow: 0 5px 20px -10px var(--primary);
 }
 .motive_pic,
 .sec_start_text {
@@ -335,6 +345,9 @@ main {
 .product-card a {
   text-decoration: none;
   color: var(--textclrprimary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .product-card:hover {
   transform: translateY(-6px) scale(1.03);
@@ -364,6 +377,10 @@ main {
   font-family: coolvetica;
   margin: 8px 0;
 }
+.product_price {
+  margin-bottom: 10px;
+}
+
 .product-gallery {
   display: flex;
   gap: 40px;
@@ -521,15 +538,16 @@ main {
   font-family: coolvetica, sans-serif;
 }
 #buy-detail img {
-  width: 180px;
+  width: 90%;
   height: auto;
-  border-radius: 12px;
+  border-radius: var(--border-radius-small);
   margin-bottom: 18px;
   box-shadow: 0 2px 12px -6px var(--secondary1);
 }
 #buy-detail p {
   color: var(--secondary1);
   margin-bottom: 24px;
+  font-size: 2.2rem;
 }
 #buy-detail form {
   display: flex;
@@ -539,7 +557,8 @@ main {
   margin-top: 12px;
 }
 #buy-detail input[type="email"],
-#buy-detail input[type="text"] {
+#buy-detail input[type="text"],
+#buy-detail input[type="tel"] {
   width: 90%;
   padding: 10px 14px;
   font-size: 1.1rem;

@@ -12,7 +12,7 @@
       <div class="logo">BT</div>
       <div class="nav_item">
         <div class="nav_links">
-          <a href="index.html" >Home</a>
+          <a href="index.html">Home</a>
         </div>
         <div class="nav_links"><a href="shop.html" class="active">Shop</a></div>
         <div class="nav_links"><a href="about_us.html">About Us</a></div>
@@ -50,9 +50,9 @@
       if (product) {
         buyDiv.innerHTML = `
           <h2>Buy: ${product.name}</h2>
-          <img src="${product.image}" loading="lazy" alt="${product.name}">
+          <img src="${product.image}" loading="lazy" id="buy_immg" alt="${product.name}">
           <p>${product.price}</p>
-          <form action="https://script.google.com/macros/s/AKfycbwtYbCqSyi9KePJqUHAeHQ_gGl6Dem1Pxw16o5KjhncTuRtUk9DSYNL50ev5Stp0G8V/exec" method="POST" id="order-form">
+          <form action="https://script.google.com/macros/s/AKfycbzSVEeZ9M-LI9YETMqAvXXBc4MgNl-5MhOpr_9y2Hhf1ysfVnTLCer1NULQbVUmdR-O/exec" method="POST" id="order-form">
             <input type="hidden" name="product_id" value="${product.id}">
             <input type="hidden" name="product_name" value="${product.name}">
             <input type="hidden" name="product_price" value="${product.price}">
@@ -60,7 +60,8 @@
             <input type="text" name="address" placeholder="Address" required>
             <input type="text" name="province" placeholder="Province" required>
             <input type="text" name="city" placeholder="City" required>
-            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="tel" name="phone" pattern="[0-9]{11}" placeholder="Whatsapp Number" required>
+            <input type="email" name="email" placeholder="Email" required>
             <button type="submit" class="buy-now-btn">Place Order</button>
           </form>
           <div id="form-message" style="margin-top: 10px; color: green;"></div>
@@ -90,11 +91,10 @@
                 throw new Error("Network response was not ok.");
               }
             })
-            .catch(() => {
+            .catch((error) => {
+              console.error("Form submit error:", error);
               document.getElementById("form-message").textContent =
-                "❌ Failed to place order.";
-              btn.disabled = false;
-              btn.textContent = "Place Order";
+                "❌ Failed to place order: " + error.message;
             });
         }
       });
