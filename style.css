@@ -1,3 +1,21 @@
+/* Basic customization */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bgclrcontentdark); /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-dark); /* Color of the thumb */
+  border-radius: 8px; /* Roundness of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary); /* Color of the thumb on hover */
+}
+
 #loader,
 body {
   height: 100vh;
@@ -14,7 +32,7 @@ body {
 .logo {
   text-align: center;
 }
-#tsparticles {
+/* #tsparticles {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +40,7 @@ body {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-}
+} */
 .hero_big,
 .loading-text,
 .logo,
